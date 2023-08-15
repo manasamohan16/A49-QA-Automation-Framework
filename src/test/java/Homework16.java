@@ -11,7 +11,7 @@ import java.time.Duration;
 
 public class Homework16 extends BaseTest{
     @Test
-    public void RegistrationNavigation() throws InterruptedException {
+    public void registrationNavigation() throws InterruptedException {
 
         //      Added ChromeOptions argument below to fix websocket error
         ChromeOptions options = new ChromeOptions();
