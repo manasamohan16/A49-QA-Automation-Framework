@@ -11,12 +11,13 @@ import java.time.Duration;
 public class LoginTests extends BaseTest {
     @Test
     public void LoginEmptyEmailPasswordTest() {
-navigateToPage();
-Assert.assertEquals(driver.getCurrentUrl(), url);
-driver.quit();
+        navigateToPage();
+        Assert.assertEquals(driver.getCurrentUrl(), url);
+        driver.quit();
     }
-@Test
-public void LoginValidEmailPassword(){
+
+    @Test
+    public void LoginValidEmailPassword() {
         navigateToPage();
         provideEmail("demo@class.com");
         providePassword("te$t$tudent");
@@ -25,6 +26,6 @@ public void LoginValidEmailPassword(){
         WebElement avatarIcon = driver.findElement(By.cssSelector("img[class='avatar']"));
         Assert.assertTrue(avatarIcon.isDisplayed());
 
-}
+    }
 
 }

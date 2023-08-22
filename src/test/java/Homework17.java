@@ -12,13 +12,13 @@ public class Homework17 extends BaseTest {
         provideEmail("manasa.mohan@testpro.io");
         providePassword("te$t$tudent");
         clickSubmit();
-searchSong("ketsa");
-viewAllSongs();
-clickFirstSong();
-clickAddToButton();
-selectPlaylist();
-Assert.assertEquals(getNotificationMessage(),newSongAddedNotificationText);
+        searchSong("ketsa");
+        viewAllSongs();
+        clickFirstSong();
+        clickAddToButton();
+        selectPlaylist();
+        Assert.assertEquals(getNotificationMessage(), newSongAddedNotificationText);
     }
 
-    }
+}
 
