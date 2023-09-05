@@ -11,10 +11,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.UUID;
 
+
+
 public class BasePage {
-    WebDriver driver;
-    WebDriverWait wait;
-    Actions actions;
+    protected WebDriver driver;
+    protected WebDriverWait wait;
+    protected Actions actions;
 
 
     public BasePage(WebDriver givenDriver) {
@@ -24,12 +26,12 @@ public class BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    public WebElement findElement(By locator) {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    public WebElement findElement(WebElement element) {
+        return wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    public void doubleClick(By locator) {
-        actions.doubleClick(findElement(locator)).perform();
+    public void doubleClick(WebElement element) {
+        actions.doubleClick(findElement(element)).perform();
     }
 
 }

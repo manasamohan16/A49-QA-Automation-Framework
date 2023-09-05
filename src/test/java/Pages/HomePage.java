@@ -1,11 +1,12 @@
-package pages;
+package Pages;
 
-import Pages.BasePage;
+
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
+
+
 
 public class HomePage extends BasePage {
 
@@ -15,11 +16,11 @@ public class HomePage extends BasePage {
     }
 
     @FindBy(css = ".playlist:nth-child(3)")
-    WebElement firstPlaylist;
+    private WebElement firstPlaylist;
     @FindBy(css = "[name='name']")
-    WebElement playlistNameField;
+    private WebElement playlistNameField;
     @FindBy(css = "div.success.show")
-    WebElement renamePlaylistSuccessMsg;
+    private WebElement renamePlaylistSuccessMsg;
 
 
     public void doubleClickPlaylist() {

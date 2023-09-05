@@ -11,13 +11,13 @@ public class LoginPage extends BasePage {
     }
 
     @FindBy(css = "input[type='email']")
-    WebElement emailField;
+    private WebElement emailField;
     @FindBy(css = "input[type='password']")
-    WebElement passwordField;
+    private WebElement passwordField;
     @FindBy(css = "button[type=submit]")
-    WebElement submitBtn;
+    private WebElement submitBtn;
 
-    public void loginCorrectCred() {
+    public void login() {
         provideEmail("demo@class.com");
         providePassword("te$t$tudent");
         clickSubmit();
